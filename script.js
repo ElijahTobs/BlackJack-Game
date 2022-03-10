@@ -1,6 +1,7 @@
+let sum = 0
 let pickedCards = []
 let currentCard = document.getElementById("cards")
-let sum = document.getElementById("sum")
+let sumEl = document.getElementById("sum")
 
 
 function getRandomNumber() {
@@ -13,5 +14,14 @@ function startGame() {
   let card2 = getRandomNumber()
   pickedCards = [card1, card2]
   sum = card1 + card2
+  renderGame()
 }
 
+function renderGame() {
+  currentCard.textContent = "Cards: "
+  for (let x in pickedCards) {
+    currentCard.textContent += pickedCards[x] + " "
+  }
+
+  sumEl.textContent = "Sum: " + sum
+}
