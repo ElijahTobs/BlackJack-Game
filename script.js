@@ -4,6 +4,8 @@ let pickedCards = []
 let currentCard = document.getElementById("cards")
 let sumEl = document.getElementById("sum")
 let intro = document.getElementById("intro")
+let isBlackJack = false
+let stillOn = false
 
 
 function getRandomNumber() {
@@ -20,6 +22,7 @@ function getRandomNumber() {
 }
 
 function startGame() {
+  stillOn = true
   let card1 = getRandomNumber()
   let card2 = getRandomNumber()
   pickedCards = [card1, card2]
@@ -38,16 +41,20 @@ function renderGame() {
   if (sum < 21) {
     message = "Do you want to draw a new card"
   } else if (sum === 21) {
+    isBlackJack = true
     message = "You've got a blackjack"
   } else {
+    stillOn = false
     message = "Game Over!"
   }
   intro.textContent = message
 }
 
 function newCard() {
-  let card1 = getRandomNumber()
-  pickedCards.push(card1)
-  sum += card1
-  renderGame()
+  if (isBlackJack === false & stillOn === true) {
+    let card1 = getRandomNumber()
+    pickedCards.push(card1)
+    sum += card1
+    renderGame()
+  }
 }
