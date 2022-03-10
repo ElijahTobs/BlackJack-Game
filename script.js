@@ -44,3 +44,10 @@ function renderGame() {
   }
   intro.textContent = message
 }
+
+function newCard() {
+  let card1 = getRandomNumber()
+  pickedCards.push(card1)
+  sum += card1
+  renderGame()
+}
