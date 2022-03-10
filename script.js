@@ -5,8 +5,16 @@ let sumEl = document.getElementById("sum")
 
 
 function getRandomNumber() {
-  let random = Math.floor(Math.random() * 11) +1
-  return random
+  
+  let random = Math.floor(Math.random() * 13) + 1
+  if (random > 10) {
+    return 10
+  } else if (random === 1) {
+    return 11
+  } else {
+    return random
+  }
+
 }
 
 function startGame() {
