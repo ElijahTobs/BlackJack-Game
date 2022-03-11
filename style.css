@@ -1,0 +1,19 @@
+main {
+  top: 40%;
+  left: 50%;
+  position: absolute;
+  border: 2px red solid;
+  border-radius: 5px;
+  padding: 40px 20px;
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#start,
+#new {
+  border-radius: 2px;
+  background-color: rgb(40, 151, 25);
+  color: #fff;
+  font-weight: 700;
+}
