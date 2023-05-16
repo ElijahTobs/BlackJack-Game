@@ -1,0 +1,22 @@
+body {
+  margin: 0 auto;
+  /* text-align: center; */
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.container {
+  margin: 20px auto;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 20px 0;
+  background: #016f32;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: goldenrod;
+  margin-bottom: 30px;
+}
