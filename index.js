@@ -2,7 +2,7 @@
 let cards = []
 let sum = 0;
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
@@ -50,11 +50,15 @@ function renderGame() {
 }
 
 function newCard() {
-  let card = getRandomCard();
-  sum += card;
+  if (isAlive && !hasBlackJack) {
+    let card = getRandomCard();
+    sum += card;
 
-  cards.push(card);
-  renderGame();
+    cards.push(card);
+    renderGame();
+  }
+
+  
 }
 
 
