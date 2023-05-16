@@ -20,3 +20,19 @@ h1 {
   color: goldenrod;
   margin-bottom: 30px;
 }
+
+button {
+  color: #016f32;
+  width: 170px;
+  background: goldenrod;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+
+
