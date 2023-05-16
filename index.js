@@ -10,6 +10,10 @@ let cardsEl = document.getElementById("cards-el")
 
 
 function startGame() {
+  renderGame()
+}
+
+function renderGame() {
   sumEl.textContent = "Sum: " + sum
   cardsEl.textContent = "Cards: " + firstCard + " " + secondCard  
 
@@ -23,12 +27,15 @@ function startGame() {
       isAlive = false
   }
 
-
   messageEl.textContent = message
 }
 
 
-
+function newCard() {
+  let card = 7
+  sum += card
+  renderGame()
+}
 
 
 
