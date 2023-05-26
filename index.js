@@ -46,6 +46,7 @@ function renderGame() {
   } else if (sum === 21) {
       message = "You've got Blackjack!"
       hasBlackJack = true
+      isAlive = false
   } else {
       message = "You're out of the game!"
       isAlive = false
@@ -55,6 +56,7 @@ function renderGame() {
 }
 
 function newCard() {
+  hasBlackJack = false
   if (isAlive && !hasBlackJack) {
     let card = getRandomCard();
     sum += card;
